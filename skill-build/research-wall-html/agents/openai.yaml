@@ -1,0 +1,6 @@
+interface:
+  display_name: "Research Wall HTML"
+  short_description: "Build fixed-size 9120x1120 research institute wall pages"
+  icon_small: "./assets/research-wall-small.svg"
+  icon_large: "./assets/research-wall-large.svg"
+  default_prompt: "Use $research-wall-html to create or update a 9120x1120 research institute HTML wall page without breaking existing asset paths or folder structure."

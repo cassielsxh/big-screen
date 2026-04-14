@@ -1,0 +1,11 @@
+.tmp-*/
+.tmp-*.png
+tmp_*/
+*.zip
+*.pptx
+files-driven-governance/
+security-preflight/
+skills-master/
+vibe-kanban/
+vibe-kanban-main/
+vibe-kanban-main.zip

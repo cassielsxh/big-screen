@@ -1,0 +1,357 @@
+:root {
+  --bg-main: #0b0d14;
+  --bg-deep: #101826;
+  --panel: rgba(10, 16, 27, 0.92);
+  --gold: #cdad68;
+  --green: #10b981;
+  --blue: #3b82f6;
+  --text: #e8edf6;
+  --muted: #aeb8c7;
+  --line: rgba(205, 173, 104, 0.34);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 16% 18%, rgba(59, 130, 246, 0.17), transparent 26%),
+    radial-gradient(circle at 84% 24%, rgba(205, 173, 104, 0.14), transparent 24%),
+    radial-gradient(circle at 82% 82%, rgba(16, 185, 129, 0.14), transparent 28%),
+    linear-gradient(155deg, #080b12 0%, #0b0d14 44%, #101a2b 100%);
+  color: var(--text);
+  font-family: "Microsoft YaHei", "Noto Sans SC", sans-serif;
+}
+
+.screen {
+  position: relative;
+  width: 9120px;
+  height: 1120px;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: repeat(8, minmax(120px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+.panel {
+  overflow: hidden;
+  padding: 18px 24px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(16, 23, 38, 0.94), rgba(8, 12, 18, 0.92));
+  box-shadow: inset 0 0 42px rgba(59, 130, 246, 0.08), 0 0 26px rgba(205, 173, 104, 0.08);
+}
+
+h1,
+h2,
+.num,
+.track-name,
+.board-grid strong {
+  font-family: "Noto Serif SC", "SimSun", serif;
+}
+
+h1 {
+  margin: 6px 0 10px;
+  font-size: 60px;
+  color: #f1d89f;
+  letter-spacing: 1px;
+}
+
+h2 {
+  margin: 0 0 12px;
+  font-size: 34px;
+  color: #e3c37b;
+}
+
+p,
+span,
+td,
+th,
+cite {
+  font-size: 26px;
+  line-height: 1.45;
+}
+
+.panel-hero {
+  grid-column: 1 / span 6;
+  grid-row: 1 / span 3;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--blue);
+  font-size: 25px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+  max-width: 96%;
+}
+
+.hero-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.hero-metrics div {
+  background: rgba(8, 18, 32, 0.72);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  padding: 10px 12px;
+}
+
+.num {
+  display: block;
+  color: var(--green);
+  font-size: 44px;
+}
+
+.label {
+  display: block;
+  color: #dce3ee;
+  font-size: 23px;
+}
+
+.panel-quote {
+  grid-column: 7 / span 6;
+  grid-row: 1 / span 3;
+}
+
+.panel-quote blockquote {
+  position: relative;
+  margin: 0;
+  padding: 26px 40px 0 82px;
+}
+
+.panel-quote blockquote::before,
+.panel-quote blockquote::after {
+  content: "“";
+  position: absolute;
+  font-size: 176px;
+  color: rgba(205, 173, 104, 0.26);
+  text-shadow: 0 0 18px rgba(205, 173, 104, 0.22);
+}
+
+.panel-quote blockquote::before {
+  top: -18px;
+  left: 6px;
+}
+
+.panel-quote blockquote::after {
+  right: 18px;
+  bottom: -30px;
+  transform: rotate(180deg);
+}
+
+.panel-quote p {
+  margin: 0;
+  font-size: 36px;
+  line-height: 1.36;
+}
+
+.panel-quote cite {
+  display: block;
+  margin-top: 14px;
+  color: var(--gold);
+  font-style: normal;
+}
+
+.panel-text {
+  grid-column: 1 / span 4;
+  grid-row: 4 / span 5;
+}
+
+.two-col {
+  column-count: 2;
+  column-gap: 28px;
+  column-rule: 1px solid rgba(205, 173, 104, 0.32);
+  text-align: justify;
+}
+
+.two-col p {
+  margin: 0 0 12px;
+}
+
+.panel-timeline {
+  grid-column: 5 / span 4;
+  grid-row: 4 / span 3;
+}
+
+.track {
+  margin-bottom: 16px;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(59, 130, 246, 0.35);
+}
+
+.track-name {
+  margin-bottom: 6px;
+  font-size: 28px;
+  color: var(--green);
+}
+
+.wave-line {
+  height: 14px;
+  border-radius: 999px;
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(205, 173, 104, 0.68),
+    rgba(205, 173, 104, 0.68) 18px,
+    rgba(59, 130, 246, 0.48) 18px,
+    rgba(59, 130, 246, 0.48) 36px
+  );
+}
+
+.wave-line.green {
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(16, 185, 129, 0.72),
+    rgba(16, 185, 129, 0.72) 18px,
+    rgba(205, 173, 104, 0.44) 18px,
+    rgba(205, 173, 104, 0.44) 36px
+  );
+}
+
+.wave-line.blue {
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(59, 130, 246, 0.72),
+    rgba(59, 130, 246, 0.72) 18px,
+    rgba(16, 185, 129, 0.44) 18px,
+    rgba(16, 185, 129, 0.44) 36px
+  );
+}
+
+.nodes {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.nodes span {
+  display: block;
+  padding: 8px;
+  background: rgba(11, 18, 31, 0.72);
+  border: 1px solid rgba(205, 173, 104, 0.34);
+  text-align: center;
+  font-size: 23px;
+}
+
+.timeline-note {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 23px;
+}
+
+.panel-table {
+  grid-column: 9 / span 4;
+  grid-row: 4 / span 2;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+th,
+td {
+  padding: 8px 10px;
+  border: 1px solid rgba(205, 173, 104, 0.42);
+  font-size: 22px;
+  vertical-align: top;
+}
+
+th {
+  background: rgba(205, 173, 104, 0.12);
+  color: #f2dcab;
+}
+
+tbody tr:nth-child(even) {
+  background: rgba(16, 185, 129, 0.06);
+}
+
+.footnote {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 21px;
+}
+
+.panel-board {
+  grid-column: 5 / span 4;
+  grid-row: 7 / span 2;
+}
+
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.board-grid article {
+  min-height: 96px;
+  padding: 10px 12px;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  background: rgba(7, 16, 28, 0.72);
+}
+
+.board-grid strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--gold);
+  font-size: 24px;
+}
+
+.board-grid span {
+  display: block;
+  font-size: 22px;
+  color: #dde6f0;
+}
+
+.panel-gallery {
+  grid-column: 9 / span 4;
+  grid-row: 6 / span 3;
+}
+
+.masonry-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: 104px;
+  gap: 8px;
+}
+
+.tile {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(59, 130, 246, 0.28);
+  background: rgba(9, 16, 26, 0.78);
+}
+
+.tile.wide {
+  grid-column: span 2;
+}
+
+.tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.04) contrast(1.03) brightness(0.94);
+}
+
+.pager {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  pointer-events: none;
+}

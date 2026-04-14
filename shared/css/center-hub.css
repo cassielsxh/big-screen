@@ -1,0 +1,136 @@
+:root {
+  --bg-0: #04111f;
+  --bg-1: #0a2135;
+  --panel: rgba(9, 25, 42, 0.88);
+  --line: rgba(121, 194, 255, 0.24);
+  --text: #eef6ff;
+  --muted: #b9cce2;
+  --title: #fff0c3;
+  --accent: #89d0ff;
+  --gold: #ffd38d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: var(--text);
+  font-family: "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  background:
+    radial-gradient(circle at 14% 18%, rgba(79, 172, 254, 0.18), transparent 22%),
+    radial-gradient(circle at 88% 16%, rgba(255, 208, 132, 0.16), transparent 20%),
+    linear-gradient(135deg, var(--bg-0) 0%, #071826 32%, var(--bg-1) 100%);
+}
+
+.hub-screen {
+  width: 9120px;
+  height: 1120px;
+  padding: 22px;
+  display: grid;
+  grid-template-rows: 220px 1fr;
+  gap: 18px;
+}
+
+.hub-hero,
+.hub-card {
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(12, 30, 49, 0.94), var(--panel));
+}
+
+.hub-hero {
+  padding: 22px 28px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 18px;
+}
+
+.hub-eyebrow {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-size: 24px;
+  letter-spacing: 1.4px;
+}
+
+.hub-title {
+  margin: 0;
+  color: var(--title);
+  font-size: 78px;
+  line-height: 1.05;
+  font-family: "Noto Serif SC", "SimSun", serif;
+}
+
+.hub-summary,
+.hub-card p,
+.hub-card span {
+  margin: 0;
+  color: var(--muted);
+  font-size: 25px;
+  line-height: 1.5;
+}
+
+.hub-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.hub-metric {
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 207, 120, 0.28);
+  background: rgba(6, 15, 25, 0.7);
+}
+
+.hub-metric strong {
+  display: block;
+  color: var(--gold);
+  font-size: 44px;
+  font-family: "Noto Serif SC", "SimSun", serif;
+}
+
+.hub-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: minmax(0, 1fr);
+  gap: 14px;
+}
+
+.hub-card {
+  min-height: 0;
+  padding: 16px 18px;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.hub-card h2 {
+  margin: 0;
+  color: var(--gold);
+  font-size: 36px;
+  line-height: 1.18;
+}
+
+.hub-card .tag {
+  color: var(--accent);
+  font-size: 21px;
+}
+
+.hub-card .meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hub-card .meta span {
+  padding: 4px 10px;
+  border: 1px solid rgba(132, 208, 255, 0.18);
+  background: rgba(132, 208, 255, 0.08);
+  color: #d7ecff;
+  font-size: 20px;
+}
